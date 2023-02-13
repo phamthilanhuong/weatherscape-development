@@ -6,10 +6,8 @@ final cityNameLocationController = FutureProvider((ref) async {
   ref.read(cityProvider.notifier).state = cityName;
   return cityName;
 });
-
 final cityNameLocationControllerNoChangeProvider = FutureProvider((ref) async {
   final cityName = await LocationUtil.getCityName();
   return cityName;
 });
-
 final cityProvider = StateProvider((ref) => 'Hanoi');
